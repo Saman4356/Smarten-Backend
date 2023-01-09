@@ -17,6 +17,15 @@
        </div>
        {% endfor %}
 
+       <!DOCTYPE html>
+<html>
+<body>
+  <div style="text-align:center">
+      <img src="https://smarten.com.np/assets/images/smarten-logo.png" alt="alternatetext">
+  </div>
+</body>
+</html>
+
       <h1 style="background-color:Tomato;"><center>WELCOME TO SMARTEN TECHNOLOGY PVT.LTD </center></h1`>
       <div style="text-align:center">
       {% if user.is_authenticated %} 
@@ -24,7 +33,7 @@
       <h4>You are successfully logged in.</h4>
       <button type="submit"><a href="/signout">SignOut</a></button>
       {% else %} 
-       <button type="submit"><a href="/signin">SignIn</a></button>
+       <button type="submit"><a href="/signin">SignIn</a></button><br>
        <button type="submit"> <a href="/signup">SignUp</a></button>
        
       {% endif %}
