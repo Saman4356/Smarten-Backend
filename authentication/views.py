@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 def home(request):
-    return render(request, "authentication/index.html")
+    return render(request, "authentication/index1.html")
 
 def signup(request):
     print("test")
@@ -29,7 +29,7 @@ def signup(request):
        messages.success(request,"Your account has been successfully creted.")
        return redirect('/signin')
 
-    return render(request, "authentication/signup.html")
+    return render(request, "authentication/index1.html")
 
 def signin(request):
     
@@ -40,17 +40,23 @@ def signin(request):
         user = authenticate(username=username, password=pass1)
 
         if user is not None:
+            print("testing1")
             login(request, user)
             fname = user.first_name
-            return render(request,"authentication/index.html",{'fname': fname})
+            return render(request,"authentication/dashboard.html",{'fname': fname})
 
         else:
+            print("testing2")
             messages.error(request,"Bad Credentials")
             return redirect('home')
 
-    return render(request, "authentication/signin.html")
+    return render(request, "authentication/signin1.html")
 
 def signout(request):
     logout(request)
     messages.success(request,"Logged Out Successfully!")
     return redirect('home')
+
+def home_page(request):
+    return render(request,"authentication/smartenweb.html")
+
