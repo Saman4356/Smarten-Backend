@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en-us" dir="ltr">
+<head>
+<title>Add Article</title>
+<link rel="stylesheet" href="/static/admin/css/base.css">
+
+  <link rel="stylesheet" href="/static/admin/css/dark_mode.css">
+
+
+  <link rel="stylesheet" href="/static/admin/css/nav_sidebar.css">
+  <script src="/static/admin/js/nav_sidebar.js" defer></script>
+
+<link rel="stylesheet" href="/static/admin/css/forms.css">
+
+
+<script src="/admin/jsi18n/"></script>
+<script src="/static/admin/js/vendor/jquery/jquery.js"></script>
+<script src="/static/admin/js/jquery.init.js"></script>
+<script src="/static/admin/js/core.js"></script>
+<script src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script src="/static/admin/js/actions.js"></script>
+<script src="/static/admin/js/urlify.js"></script>
+<script src="/static/admin/js/prepopulate.js"></script>
+<script src="/static/admin/js/vendor/xregexp/xregexp.js"></script>
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" app-authentication model-services change-form"
+  data-admin-utc-offset="0">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="/servicesarticle">Smarten Article Upload</a></h1>
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>Saman</strong>.
+            
+            
+                
+                    <a href="/services">View site</a> 
+                
+            
+        </div>
+        
+        
+        
+    </div>
+    
+    <!-- END Header -->
+    
+<div class="breadcrumbs">
+<a href="/signin">Home</a>
+&rsaquo; <a href="/admin/authentication/">Authentication</a>
+&rsaquo; <a href="/admin/authentication/services/">Servicess</a>
+&rsaquo; Add Article
+</div>
+
+    
+
+    <div class="main" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar">
+  <input type="search" id="nav-filter"
+         placeholder="Start typing to filter…"
+         aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-authentication module current-app">
+      <table>
+        <caption>
+          <a href="/admin/authentication/" class="section" title="Models in the Authentication application">Authentication</a>
+        </caption>
+        
+          <tr class="model-services current-model">
+            
+              <th scope="row"><a href="/admin/authentication/services/" aria-current="page">Servicess</a></th>
+            
+
+            
+              <td><a href="/admin/authentication/services/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-auth module">
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <div class="content">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="colM">
+          
+          <h1>Add Article</h1>
+          
+          <div id="content-main">
+
+
+
+<form enctype="multipart/form-data" method="post" id="services_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="AjmLyeQIDoSVBFGSitPprLcNgr8WJRwDD2o6DM5T7ivVD7VluQf9iiMtVC0XKyrn">
+<div>
+
+
+
+
+
+
+
+  <fieldset class="module aligned ">
+    
+        <div class="form-row field-services_title">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_services_title">Services title:</label>
+                        
+                            <input type="text" name="services_title" class="vTextField" maxlength="50" required id="id_services_title">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-services_des">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_services_des">Services des:</label>
+                        
+                            <textarea name="services_des" cols="40" rows="10" class="vLargeTextField" required id="id_services_des">
+</textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-services_image">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_services_image">Services image:</label>
+                        
+                            <input type="file" name="services_image" accept="image/*" required id="id_services_image">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="submit-row">
+
+<input type="submit" value="Save" class="default" name="_save">
+
+
+<input type="submit" value="Save and add another" name="_addanother">
+<input type="submit" value="Save and continue editing" name="_continue">
+
+
+</div>
+
+
+
+    <script id="django-admin-form-add-constants"
+            src="/static/admin/js/change_form.js"
+            
+                data-model-name="services"
+            
+            async>
+    </script>
+
+
+
+
+<script id="django-admin-prepopulated-fields-constants"
+        src="/static/admin/js/prepopulate_init.js"
+        data-prepopulated-fields="[]">
+</script>
+
+
+</div>
+</form></div>
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </div>
+    </div>
+</div>
+<!-- END Container -->
+</body>
+</html>

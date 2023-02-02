@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from .models import Services,ImageSlider
 
 # Create your views here.
 def home(request):
@@ -32,8 +33,14 @@ def signup(request):
     return render(request, "authentication/index1.html")
 
 def signin(request):
+
+    if request.user.is_authenticated:
+        return render(request,"authentication/dashboard1.html",{})
     
-    if request.method == 'POST':
+    
+    # Do something for anonymous users.
+    
+    elif request.method == 'POST':
         username = request.POST['username']
         pass1 = request.POST['pass1']
 
@@ -43,14 +50,14 @@ def signin(request):
             print("testing1")
             login(request, user)
             fname = user.first_name
-            return render(request,"authentication/dashboard.html",{'fname': fname})
+            return render(request,"authentication/dashboard1.html",{'fname': fname})
 
         else:
             print("testing2")
             messages.error(request,"Bad Credentials")
             return redirect('home')
-
-    return render(request, "authentication/signin1.html")
+    else:
+        return render(request, "authentication/signin1.html")
 
 def signout(request):
     logout(request)
@@ -58,5 +65,37 @@ def signout(request):
     return redirect('home')
 
 def home_page(request):
-    return render(request,"authentication/smartenweb.html")
+    a = ImageSlider.objects.all()
+    Imageslider_data = {
+        'data':a
+    }
+    return render(request,"authentication/smartenweb_homepage.html",Imageslider_data)
+
+def company_page(request):
+    return render(request,"authentication/smartenweb_company.html")
+
+def services_page(request):
+    a = Services.objects.all()
+    services_data = {
+        'data':a
+    }
+    return render(request,"authentication/smartenweb_services.html",services_data)
+
+def contactus_page(request):
+    return render(request,"authentication/smartenweb_contactus.html")
+
+def profile_page(request):
+    return render(request,"authentication/profile.html")
+
+def calendar_page(request):
+    return render(request,"authentication/calendar.html")
+
+def widgets_page(request):
+    return render(request,"authentication/widgets.html")
+
+def services_article_page(request):
+    return render(request,"authentication/services_article_upload.html")
+    
+def homepage_imageslider(request):
+    return render(request,"authentication/homepage_imageslider.html")
 

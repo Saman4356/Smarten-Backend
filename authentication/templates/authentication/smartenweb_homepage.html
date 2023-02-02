@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="csrf-token" content="5ty0jXzofbm4hw0x1BhhoaSdIV1kdWI5QOiTFMa3">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favicon.png' %}">
+
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>Smarten Technologies</title>
+
+    <link rel="stylesheet" href="{% static 'assets/css/webfonts.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/plugins.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/color.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+<!-- Revolution Style -->
+<link rel="stylesheet" href="{% static 'assets/css/revolution/settings.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/revolution/navigation.css' %}">
+</head>
+<body itemscope>
+
+    <main>
+        <header class="style4 v2 stick">
+    <div class="topbar-box">
+        <div class="topbar-scl-sgn pull-right">
+            <div class="tp-scl">
+                <a href="https://www.instagram.com/smartentechnologies/" title="Instagram" itemprop="url"
+                   target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/smarten.technologies" title="Facebook" itemprop="url" target="_blank"><i
+                        class="fa fa-facebook-square"></i></a>
+                <a href="#" title="Twitter" itemprop="url" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="#" title="Linkedin" itemprop="url" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <a href="/contactus" title="Login" itemprop="url"><i class="fa fa-sign-in"></i> Get Quote</a>
+        </div>
+        <ul class="topbar-info pull-right">
+            <li><i class="fa fa-phone"></i> <strong>+977-1-5900098</strong> Call us anytime</li>
+            <li><i class="fa fa-envelope"></i> <strong>info@smarten.com</strong> Drop us a line anytime!</li>
+            <li><i class="fa fa-clock-o"></i> <strong>Working Hours:</strong> Sun - Fri : 9:00 am to 6:00 pm</li>
+        </ul>
+        <div class="logo">
+            <a href="/homepage" title="Logo" itemprop="url">
+                <img src="{% static 'assets/images/smarten-logo.png' %}" alt="{% static 'smarten-logo.png'" itemprop="image"
+                     style="width: 135px">
+            </a>
+        </div>
+    </div><!-- Topbar Box -->
+    <div class="menu-box">
+        <nav>
+            <div>
+                <ul>
+                    <li class="menu-item"><a href="/homepage" title="" itemprop="url">Home</a>
+                    </li>
+                    <li class="menu-item"><a href="/company" title="" itemprop="url">Company</a>
+                    </li>
+                    <li class="menu-item"><a href="/services" title="" itemprop="url">Services</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="menu-item"><a href="/contactus" title="" itemprop="url">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div><!-- Menu Box -->
+</header><!-- Header -->
+
+<!-- Responsive Menu -->
+<div class="rspn-hdr">
+    <div class="rspn-mdbr">
+        <ul class="rspn-scil">
+            <li><a href="#" title="Facebook" itemprop="url" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" title="Instagram" itemprop="url" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#" title="Twitter" itemprop="url" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" title="Linkedin" itemprop="url" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+    <div class="lg-mn">
+        <div class="logo">
+            <a href="index.html" title="Logo" itemprop="url">
+                <img src="{% static 'assets/images/smarten-logo.png' %}" alt="{% static 'smarten-logo.png' %}" itemprop="image"
+                     style="width: 135px">
+            </a>
+        </div>
+        <span class="rspn-mnu-btn"><i class="fa fa-list-ul"></i></span>
+    </div>
+    <div class="rsnp-mnu">
+        <span class="rspn-mnu-cls"><i class="fa fa-times"></i></span>
+        <ul>
+            <li class="menu-item"><a href="#" title="" itemprop="url">Home</a>
+            </li>
+            <li class="menu-item"><a href="#" title="" itemprop="url">Company</a>
+            </li>
+            <li class="menu-item"><a href="#" title="" itemprop="url">Services</a>
+            </li>
+            <li class="menu-item"><a href="#" title="" itemprop="url">Products</a>
+            </li>
+            <li class="menu-item"><a href="#" title="" itemprop="url">SEO</a>
+            </li>
+            <li class="menu-item"><a href="#" title="" itemprop="url">Contact Us</a>
+            </li>
+        </ul>
+    </div><!-- Responsive Menu -->
+</div><!-- Responsive Header -->
+
+        <section>
+            <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="notgeneric125"
+                 data-source="gallery"
+                 style="background-color:transparent;padding:0px;">
+                <div id="rev_slider_4_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
+                    <ul>
+                        {% for item in data %}
+                        <li data-index="rs-1" data-transition="random" data-slotamount="default" data-hideafterloop="0"
+                            data-hideslideonmobile="off"
+                            data-title="Slide Title" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut"
+                            data-masterspeed="2000"
+                            data-rotate="0" data-fstransition="random" data-fsmasterspeed="1500" data-fsslotamount="7"
+                            data-saveperformance="off"
+                            data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
+                            data-param7=""
+                            data-param8="" data-param9="" data-param10="" data-description="">
+                            
+                            <img src="/media/{{ item.slider_image }}" alt="test"
+                                 data-bgposition="center center"
+                                 data-bgfit="cover" data-bgrepeat="no-repeat"
+                                 data-bgparallax="10" class="rev-slidebg" data-no-retina>
+
+                            <div class="tp-caption tp-resizeme" id="slide-layer-1"
+                                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                 data-y="['middle','middle','middle','middle']"
+                                 data-voffset="['-110','-100','-100','-80']" data-fontsize="['30','25','20','17']"
+                                 data-lineheight="['70','60','55','40']" data-width="none" data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-type="text" data-responsive_offset="on"
+                                 data-frames='[{"from":"y:-[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                 data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
+                                 data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                 style="letter-spacing: 5px;color: #fff;font-weight:700;font-family: poppins;">{{item.slider_title}}
+                            </div>
+
+                            <div class="tp-caption tp-resizeme" id="slide-layer-2"
+                                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                 data-y="['middle','middle','middle','middle']" data-voffset="['-50','-50','-50','-50']"
+                                 data-fontsize="['70','55','45','30']"
+                                 data-lineheight="['70','60','55','40']" data-width="none" data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-type="text" data-responsive_offset="on"
+                                 data-frames='[{"from":"y:-[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                 data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
+                                 data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                 style="letter-spacing: -.75px;color: #fff;font-weight:800;font-family: poppins;">
+                                Provide Smart Cities Application
+                            </div>
+
+                            <div class="tp-caption theme-clr tp-resizeme" id="slide-layer-3"
+                                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                 data-y="['middle','middle','middle','middle']" data-voffset="['20','0','0','-10']"
+                                 data-fontsize="['19','18','17','14']"
+                                 data-lineheight="['auto','auto','auto','auto']" data-width="none" data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-type="text" data-responsive_offset="on"
+                                 data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                 data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
+                                 data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                 style="letter-spacing: 0px;font-family: open sans;color: #fff;font-weight: 300;">
+                                Smart Communities, Sustainable Future
+                            </div>
+                            
+                        </li>
+                        {% endfor %}    
+                    </ul>
+                </div>
+            </div>
+        </section><!-- Slider Area -->
+
+        <section>
+            <div class="spacing">
+                <div class="container">
+                    <div class="srv-wrp5 remove-ext11">
+                        <div class="srv-bx5">
+                            <div class="row">
+                                <div class="col-md-5 col-sm-12 col-lg-5">
+                                    <div class="srv-inf5">
+                                        <h2 itemprop="headline">Advance Metering Infrastructure</h2>
+                                        <p itemprop="description">
+                                            AMI enables two-way communication meters reading electrical consumption at a
+                                            higher frequency.
+                                            This information can be processed in real-time and signals sent to manage
+                                            demand.
+                                        </p>
+                                        <ul class="srv-inf-lst">
+                                            <li>Software system with robust architecture, high availability and
+                                                reliability
+                                            </li>
+                                            <li>Real time data acquisition from meters</li>
+                                            <li>Support for channels of different time series.</li>
+                                            <li>Processing, monitoring, analysis and diagnostics</li>
+                                        </ul>
+                                        <a class="brd-rd30" href="#" title="" itemprop="url">Learn more</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-sm-12 col-lg-7">
+                                    <div class="srv-thmb7">
+                                        <img src="{% static 'assets/images/resources/srv-img-1.png' %}"
+                                             alt="{% static 'srv-img5-1.png' %}"
+                                             itemprop="image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="srv-bx5">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 col-lg-7">
+                                    <div class="srv-thmb7">
+                                        <img src="{% static 'assets/images/resources/srv-img-2.png' %}"
+                                             alt="{% static 'srv-img5-2.png' %}"
+                                             itemprop="image">
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12 col-lg-5">
+                                    <div class="srv-inf5">
+                                        <h2 itemprop="headline">Telecom Services</h2>
+                                        <p itemprop="description">We focus on a simple goal, to provide our clients with
+                                            the best and most cost effective solution to fit their telecommunication
+                                            network infrastructure requirements.</p>
+                                        <ul class="srv-inf-lst">
+                                            <li>Network infrastructure installation services</li>
+                                            <li>Fibre optic (FTTA, FTTX) solutions</li>
+                                            <li>Data Centre Solutions & Managed services</li>
+                                            <li>End to End Project Management</li>
+                                        </ul>
+                                        <a class="brd-rd30" href="#" title="" itemprop="url">Learn more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="srv-bx5">
+                            <div class="row">
+                                <div class="col-md-5 col-sm-12 col-lg-5">
+                                    <div class="srv-inf5">
+                                        <h2 itemprop="headline">ERP Customization & Implementation</h2>
+                                        <p itemprop="description">
+                                            Odoo is a suite of enterprise management software designed to help your
+                                            business be more
+                                            effective and efficient. Its suite has open-source apps needed for all your
+                                            business needs.
+                                            Whether you want to manage the finance of your business or maintain customer
+                                            relationship
+                                            management, it has it all.
+                                        </p>
+                                        <ul class="srv-inf-lst">
+                                            <li>When it comes to businesses, there is no “one size fits all” approach.
+                                                Let experts take care of it
+                                            </li>
+                                            <li>
+                                                Odoo is a cutting-edge Enterprise Resource Planning (ERP) software made
+                                                for the business to take on the digital transformation despite the size
+                                                of the business.
+                                            </li>
+                                            <li>Always beside you as a partner to solve all your problems</li>
+                                        </ul>
+                                        <a class="brd-rd30" href="/services" title="" itemprop="url">Learn more</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-sm-12 col-lg-7">
+                                    <div class="srv-thmb7">
+                                        <img src="{% static 'assets/images/resources/odoo-apps.png' %}"
+                                             alt="{% static 'srv-img5-1.png' %}"
+                                             itemprop="image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="spacing top-spac100 bottom-spac155">
+                <div class="container">
+                    <div class="testi-spnsr">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-lg-6">
+                                <div class="testi-car owl-carousel">
+                                    <div class="testi-bx">
+                                        <img class="brd-rd50"
+                                             src="{% static 'assets/images/resources/testi-img1-1.jpg' %}"
+                                             alt="{% static 'testi-img1-1.jpg' %}" itemprop="image"><h6 itemprop="headline">John
+                                            Doe</h6>
+                                        <p itemprop="description">Donec sed odio dui. Vivamus sagittis lacus vel augue
+                                            laoreet rutrum faucibus dolor auctor. Donecullamcorper nulla non metus
+                                            auctor fringilla.</p>
+                                    </div>
+                                    <div class="testi-bx">
+                                        <img class="brd-rd50"
+                                             src="{% static 'assets/images/resources/testi-img1-2.jpg' %}"
+                                             alt="{% static 'testi-img1-2.jpg' %}" itemprop="image"><h6 itemprop="headline">Lina
+                                            Alberts</h6>
+                                        <p itemprop="description">Donec sed odio dui. Vivamus sagittis lacus vel augue
+                                            laoreet rutrum faucibus dolor auctor. Donecullamcorper nulla non metus
+                                            auctor fringilla.</p>
+                                    </div>
+                                </div><!-- Testimonials Carousel -->
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-lg-6">
+                                <div class="spnsr-car text-center owl-carousel">
+                                    <div class="spnsr-bx">
+                                        <a href="#" title="" itemprop="url"><img
+                                                src="{% static 'assets/images/resources/nea.png' %}" alt="{% static 'spnsr1.png' %}"
+                                                itemprop="image"></a>
+                                    </div>
+                                    <div class="spnsr-bx">
+                                        <a href="#" title="" itemprop="url"><img
+                                                src="{% static 'assets/images/resources/DishHome_Logo.png' %}"
+                                                alt="{% static 'spnsr2.png' %}" itemprop="image"></a>
+                                    </div>
+                                    <div class="spnsr-bx">
+                                        <a href="#" title="" itemprop="url"><img
+                                                src="{% static 'assets/images/resources/Ncell_Logo.png' %}"
+                                                alt="{% static 'spnsr3.png' %}" itemprop="image"></a>
+                                    </div>
+                                    <div class="spnsr-bx">
+                                        <a href="#" title="" itemprop="url"><img
+                                                src="{% static 'assets/images/resources/odoo_ready_partners.png' %}"
+                                                alt="{% static 'spnsr4.png' %}" itemprop="image"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Testimonials & Sponsors -->
+                </div>
+            </div>
+        </section>
+
+        
+        <section>
+    <div class="spacing theme-bg top-spac90 bottom-spac90">
+        <div class="container">
+            <div class="nws-ltr-wrp">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-lg-6">
+                        <div class="nws-ltr">
+                            <h4 itemprop="headline">Email Newsletter</h4>
+                            <p itemprop="description">Keep me up to date with content, updates, and offers from
+                                Smarten</p>
+                            <form class="nws-frm">
+                                {% csrf_token %}
+                                <input type="email" name="email" placeholder="Email address" required>
+                                <button class="theme-btn hrz brd-rd2" type="submit">SUBSCRIBE</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-lg-6">
+                        <div class="facts-wrp remove-ext3">
+                            <div class="fact-bx">
+                                <strong class="counter">100000</strong>+
+                                <span>IOT Nodes</span>
+                            </div>
+                            <div class="fact-bx">
+                                <strong class="counter">150000</strong>
+                                <span>CUSTOMERS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <footer>
+    <div class="spacing drk-bg top-spac80 bottom-spac80">
+        <div class="container">
+            <div class="ftr-wrp remove-ext5">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-lg-3">
+                        <div class="wdgt abt-wdgt">
+                            <div class="logo">
+                                <a href="#" title="" itemprop="url">
+                                    <img src="{% static 'assets/images/smarten-logo.png' %}" alt="{% static 'smarten-logo.png' %}"
+                                         itemprop="image">
+                                </a>
+                            </div>
+                            <p itemprop="description">SMARTEN is a SINGLE WINDOW INTERFACE FOR FTTA, FTTX, AMI
+                                IMPLEMENTATION,
+                                AND ERP SOLUTIONS.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-lg-3">
+                        <div class="wdgt">
+                            <h4 itemprop="headline" class="wdgt-tl">Recent Blogs</h4>
+                            <div class="rcnt-itm">
+                                <h4 itemprop="headline"><a href="#" title=""
+                                                           itemprop="url">Smart Electricity Meters in the Kathmandu
+                                        Valley</a></h4>
+                                <ul class="post-meta">
+                                    <li><i class="fa fa-clock-o theme-clr"></i> September 25, 2022</li>
+                                </ul>
+                            </div>
+                            <div class="rcnt-itm">
+                                <h4 itemprop="headline"><a href="#" title=""
+                                                           itemprop="url">Future of Optical Link (5G)</a></h4>
+                                <ul class="post-meta">
+                                    <li><i class="fa fa-clock-o theme-clr"></i> March 18, 2022</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-lg-3">
+                        <div class="wdgt">
+                            <h4 itemprop="headline" class="wdgt-tl">Resources</h4>
+                            <div class="rcnt-itm">
+                                <ul class="post-meta">
+                                    <li><i class="fa fa-clock-o theme-clr"></i> About Us</li>
+                                    <li><i class="fa fa-clock-o theme-clr"></i> Terms & Conditions</li>
+                                    <li><i class="fa fa-clock-o theme-clr"></i> Career</li>
+                                    <li><i class="fa fa-clock-o theme-clr"></i> FAQs</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-lg-3">
+                        <div class="wdgt">
+                            <h4 itemprop="headline" class="wdgt-tl">Our Contacts</h4>
+                            <p itemprop="description">For any queries contact us...</p>
+                            <ul class="ft-cnt-lst">
+                                <li><strong>Email:</strong> <a href="#" title=""
+                                                               itemprop="url">support@smarten.com.np</a>
+                                </li>
+                                <li><strong>Phone:</strong> 01-5900098 / 985-1081507</li>
+                            </ul>
+                            <div class="scl-lnks">
+                                <a class="brd-rd50" href="https://www.facebook.com/smarten.technologies" title="Facebook" itemprop="url" target="_blank"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a class="brd-rd50" href="#" title="twitter" itemprop="url" target="_blank"><i
+                                        class="fa fa-twitter"></i></a>
+                                <a class="brd-rd50" href="https://www.instagram.com/smartentechnologies/" title="Instagram" itemprop="url" target="_blank"><i
+                                        class="fa fa-instagram"></i></a>
+                                <a class="brd-rd50" href="#" title="Linkedin" itemprop="url" target="_blank"><i
+                                        class="fa fa-linkedin"></i></a>
+                                <a class="brd-rd50" href="#" title="Youtube" itemprop="url" target="_blank"><i
+                                        class="fa fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Footer Wrap -->
+        </div>
+    </div>
+</footer>
+<div class="btm-br text-center">
+    <div class="container">
+        <p itemprop="description">&copy; 2023 All Rights Reserved ||
+            <a href="/homepage" title="Smarten" itemprop="url"
+               target="_blank">Smarten Technologies Pvt Ltd</a>
+        </p>
+    </div>
+</div>
+    </main><!-- Main Wrapper -->
+
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins.min.js' %}"></script>
+<script src="{% static 'assets/js/part-int.js' %}"></script>
+<script src="{% static 'assets/js/custom-scripts.js' %}"></script>
+
+<!-- Revolution JS Files -->
+<script src="{% static 'assets/js/revolution/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'assets/js/revolution/jquery.themepunch.revolution.min.js' %}"></script>
+
+<!-- Slider Revolution 5.0 Extensions -->
+<script src="{% static 'assets/js/revolution/extensions/revolution.extension.actions.min.js' %}"></script>
+<script src="{% static 'assets/js/revolution/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static 'assets/js/revolution/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static 'assets/js/revolution/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static 'assets/js/revolution/extensions/revolution.extension.migration.min.js' %}"></script>
+<script src="{% static 'assets/js/revolution/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static 'assets/js/revolution/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static 'assets/js/revolution/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static 'assets/js/revolution/extensions/revolution.extension.video.min.js' %}"></script>
+<script src="{% static 'assets/js/revolution/revolution-init.js' %}"></script>
+</body>
+</html>
