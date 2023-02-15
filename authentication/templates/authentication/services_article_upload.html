@@ -1,39 +1,255 @@
 <!DOCTYPE html>
+<html>
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Smarten Backend | Dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static
+      'plugins/fontawesome-free/css/all.min.css' %}">
+    <!-- Ionicons -->
+    <link rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bbootstrap 4 -->
+    <link rel="stylesheet" href="{% static
+      'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css'
+      %}">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="{% static
+      'plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="{% static 'plugins/jqvmap/jqvmap.min.css' %}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="{% static
+      'plugins/overlayScrollbars/css/OverlayScrollbars.min.css' %}">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="{% static
+      'plugins/daterangepicker/daterangepicker.css' %}">
+    <!-- summernote -->
+    <link rel="stylesheet" href="{% static
+      'plugins/summernote/summernote-bs4.css' %}">
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+      rel="stylesheet">
+      <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="{% static 'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{% static 'plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="{% static 'plugins/jqvmap/jqvmap.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{% static 'plugins/overlayScrollbars/css/OverlayScrollbars.min.css' %}">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{% static 'plugins/daterangepicker/daterangepicker.css' %}">
+  <!-- summernote -->
+  <link rel="stylesheet" href="{% static 'plugins/summernote/summernote-bs4.css' %}">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
 
-<html lang="en-us" dir="ltr">
-<head>
-<title>Add Article</title>
-<link rel="stylesheet" href="/static/admin/css/base.css">
+      <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+          <!-- Left navbar links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
+                  class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
 
-  <link rel="stylesheet" href="/static/admin/css/dark_mode.css">
+          <!-- SEARCH FORM -->
+          <form class="form-inline ml-3">
+            <!-- {% csrf_token %} -->
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search"
+                placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
 
+          <!-- Right navbar links -->
+          <ul class="navbar-nav ml-auto">
+            <!-- Messages Dropdown Menu -->
+            <li class="nav-item dropdown">
+              <a class="nav-link" data-toggle="dropdown" href="#">
+                <i class="far fa-comments"></i>
+                <span class="badge badge-danger navbar-badge">3</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <a href="#" class="dropdown-item">
+                  <!-- Message Start -->
+                  <div class="media">
+                    <img src="{% static 'dist/img/user1-128x128.jpg' %}"
+                      alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                    <div class="media-body">
+                      <h3 class="dropdown-item-title">
+                        Brad Diesel
+                        <span class="float-right text-sm text-danger"><i
+                            class="fas fa-star"></i></span>
+                      </h3>
+                      <p class="text-sm">Call me whenever you can...</p>
+                      <p class="text-sm text-muted"><i class="far fa-clock
+                          mr-1"></i> 4 Hours Ago</p>
+                    </div>
+                  </div>
+                  <!-- Message End -->
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">
+                  <!-- Message Start -->
+                  <div class="media">
+                    <img src="{% static 'dist/img/user8-128x128.jpg' %}"
+                      alt="User Avatar" class="img-size-50 img-circle mr-3">
+                    <div class="media-body">
+                      <h3 class="dropdown-item-title">
+                        John Pierce
+                        <span class="float-right text-sm text-muted"><i
+                            class="fas fa-star"></i></span>
+                      </h3>
+                      <p class="text-sm">I got your message bro</p>
+                      <p class="text-sm text-muted"><i class="far fa-clock
+                          mr-1"></i> 4 Hours Ago</p>
+                    </div>
+                  </div>
+                  <!-- Message End -->
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">
+                  <!-- Message Start -->
+                  <div class="media">
+                    <img src="{% static 'dist/img/user3-128x128.jpg' %}"
+                      alt="User Avatar" class="img-size-50 img-circle mr-3">
+                    <div class="media-body">
+                      <h3 class="dropdown-item-title">
+                        Nora Silvester
+                        <span class="float-right text-sm text-warning"><i
+                            class="fas fa-star"></i></span>
+                      </h3>
+                      <p class="text-sm">The subject goes here</p>
+                      <p class="text-sm text-muted"><i class="far fa-clock
+                          mr-1"></i> 4 Hours Ago</p>
+                    </div>
+                  </div>
+                  <!-- Message End -->
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item dropdown-footer">See All
+                  Messages</a>
+              </div>
+            </li>
+            <!-- Notifications Dropdown Menu -->
+            <li class="nav-item dropdown">
+              <a class="nav-link" data-toggle="dropdown" href="#">
+                <i class="far fa-bell"></i>
+                <span class="badge badge-warning navbar-badge">15</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <span class="dropdown-item dropdown-header">15 Notifications</span>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">
+                  <i class="fas fa-envelope mr-2"></i> 4 new messages
+                  <span class="float-right text-muted text-sm">3 mins</span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">
+                  <i class="fas fa-users mr-2"></i> 8 friend requests
+                  <span class="float-right text-muted text-sm">12 hours</span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">
+                  <i class="fas fa-file mr-2"></i> 3 new reports
+                  <span class="float-right text-muted text-sm">2 days</span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item dropdown-footer">See All
+                  Notifications</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-widget="control-sidebar"
+                data-slide="true" href="#" role="button">
+                <i class="fas fa-th-large"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.navbar -->
 
-  <link rel="stylesheet" href="/static/admin/css/nav_sidebar.css">
-  <script src="/static/admin/js/nav_sidebar.js" defer></script>
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+          <!-- Brand Logo -->
+          <a href="index3.html" class="brand-link">
+            <img src="{% static 'images/smarten-image.jpeg' %}"
+              alt="alternatetext" height="40" width="175">
+            <span class="brand-text font-weight-light">Admin</span>
+          </a>
 
-<link rel="stylesheet" href="/static/admin/css/forms.css">
+          <!-- Sidebar -->
+          <div class="sidebar">
+            <!-- Sidebar user panel (optional) -->
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+              <div class="image">
+                <img src="{% static 'images/SamanYadav.jpeg' %}"
+                  class="img-circle elevation-2" alt="User Image">
+              </div>
+              <div class="info">
+                <a href="/profile" class="d-block">Saman Yadav</a>
+              </div>
+            </div>
 
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+              <ul class="nav nav-pills nav-sidebar flex-column"
+                data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                <li class="nav-item has-treeview menu-open">
+                  <a href="#" class="nav-link active">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <p>
+                      Dashboard
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="/signin" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                          Home
+                          <span class="right badge badge-danger"></span>
+                        </p>
+                      </a>
+                    </li>
+                  </ul>
+                  </li>
+                  </ul>
+                  </nav>
+                  </div>
+                  </aside>
+            
 
-<script src="/admin/jsi18n/"></script>
-<script src="/static/admin/js/vendor/jquery/jquery.js"></script>
-<script src="/static/admin/js/jquery.init.js"></script>
-<script src="/static/admin/js/core.js"></script>
-<script src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
-<script src="/static/admin/js/actions.js"></script>
-<script src="/static/admin/js/urlify.js"></script>
-<script src="/static/admin/js/prepopulate.js"></script>
-<script src="/static/admin/js/vendor/xregexp/xregexp.js"></script>
-
-
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="/static/admin/css/responsive.css">
-    
-
-<meta name="robots" content="NONE,NOARCHIVE">
-</head>
-
-<body class=" app-authentication model-services change-form"
-  data-admin-utc-offset="0">
+                  <div class="col-10 app-authentication model-services change-form" data-admin-utc-offset="0">
 
 <!-- Container -->
 <div id="container">
@@ -44,7 +260,7 @@
     <div id="header">
         <div id="branding">
         
-<h1 id="site-name"><a href="/servicesarticle">Smarten Article Upload</a></h1>
+<h1 id="site-name"><a href="/admin/">Django administration</a></h1>
 
         </div>
         
@@ -56,8 +272,19 @@
             
             
                 
-                    <a href="/services">View site</a> 
+                    <a href="/">View site</a> /
                 
+                
+                    
+                    
+                
+                
+                <a href="/admin/password_change/">Change password</a> /
+                
+                <form id="logout-form" method="post" action="/admin/logout/">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="hp3imqhM34PyUGIKhZokcXx4E0yVJuMO0anMyrvtWVXaYOFDrPPmaAaoEJ1X9ajR">
+                    <button type="submit">Log out</button>
+                </form>
             
         </div>
         
@@ -68,23 +295,21 @@
     <!-- END Header -->
     
 <div class="breadcrumbs">
-<a href="/signin">Home</a>
-&rsaquo; <a href="/admin/authentication/">Authentication</a>
-&rsaquo; <a href="/admin/authentication/services/">Servicess</a>
-&rsaquo; Add Article
+<a href="/admin/">Home</a>
+› <a href="/admin/authentication/">Authentication</a>
+› <a href="/admin/authentication/services/">Servicess</a>
+› Add services
 </div>
 
     
 
-    <div class="main" id="main">
+    <div class="main shifted" id="main">
       
         
           
 <button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
 <nav class="sticky" id="nav-sidebar">
-  <input type="search" id="nav-filter"
-         placeholder="Start typing to filter…"
-         aria-label="Filter navigation items">
+  <input type="search" id="nav-filter" placeholder="Start typing to filter…" aria-label="Filter navigation items">
   
 
 
@@ -94,6 +319,18 @@
         <caption>
           <a href="/admin/authentication/" class="section" title="Models in the Authentication application">Authentication</a>
         </caption>
+        
+          <tbody><tr class="model-imageslider">
+            
+              <th scope="row"><a href="/admin/authentication/imageslider/">Image sliders</a></th>
+            
+
+            
+              <td><a href="/admin/authentication/imageslider/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
         
           <tr class="model-services current-model">
             
@@ -107,10 +344,40 @@
             
           </tr>
         
-      </table>
+      </tbody></table>
     </div>
   
     <div class="app-auth module">
+      <table>
+        <caption>
+          <a href="/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        
+          <tbody><tr class="model-group">
+            
+              <th scope="row"><a href="/admin/auth/group/">Groups</a></th>
+            
+
+            
+              <td><a href="/admin/auth/group/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-user">
+            
+              <th scope="row"><a href="/admin/auth/user/">Users</a></th>
+            
+
+            
+              <td><a href="/admin/auth/user/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </tbody></table>
     </div>
   
 
@@ -126,13 +393,13 @@
         <!-- Content -->
         <div id="content" class="colM">
           
-          <h1>Add Article</h1>
+          <h1>Add services</h1>
           
           <div id="content-main">
 
 
 
-<form enctype="multipart/form-data" method="post" id="services_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="AjmLyeQIDoSVBFGSitPprLcNgr8WJRwDD2o6DM5T7ivVD7VluQf9iiMtVC0XKyrn">
+<form enctype="multipart/form-data" method="post" id="services_form" novalidate=""><input type="hidden" name="csrfmiddlewaretoken" value="hp3imqhM34PyUGIKhZokcXx4E0yVJuMO0anMyrvtWVXaYOFDrPPmaAaoEJ1X9ajR">
 <div>
 
 
@@ -143,6 +410,24 @@
 
   <fieldset class="module aligned ">
     
+    
+    
+        <div class="form-row field-services_icon">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_services_icon">Services icon:</label>
+                        
+                            <input type="text" name="services_icon" class="vTextField" maxlength="50" required="" id="id_services_icon">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
         <div class="form-row field-services_title">
             
             
@@ -151,7 +436,7 @@
                     
                         <label class="required" for="id_services_title">Services title:</label>
                         
-                            <input type="text" name="services_title" class="vTextField" maxlength="50" required id="id_services_title">
+                            <input type="text" name="services_title" class="vTextField" maxlength="50" required="" id="id_services_title">
                         
                     
                     
@@ -167,8 +452,7 @@
                     
                         <label class="required" for="id_services_des">Services des:</label>
                         
-                            <textarea name="services_des" cols="40" rows="10" class="vLargeTextField" required id="id_services_des">
-</textarea>
+                            <textarea name="services_des" cols="40" rows="10" class="vLargeTextField" required="" id="id_services_des"></textarea>
                         
                     
                     
@@ -184,7 +468,7 @@
                     
                         <label class="required" for="id_services_image">Services image:</label>
                         
-                            <input type="file" name="services_image" accept="image/*" required id="id_services_image">
+                            <input type="file" name="services_image" accept="image/*" required="" id="id_services_image">
                         
                     
                     
@@ -219,20 +503,13 @@
 
 
 
-    <script id="django-admin-form-add-constants"
-            src="/static/admin/js/change_form.js"
-            
-                data-model-name="services"
-            
-            async>
+    <script id="django-admin-form-add-constants" src="/static/admin/js/change_form.js" data-model-name="services" async="">
     </script>
 
 
 
 
-<script id="django-admin-prepopulated-fields-constants"
-        src="/static/admin/js/prepopulate_init.js"
-        data-prepopulated-fields="[]">
+<script id="django-admin-prepopulated-fields-constants" src="/static/admin/js/prepopulate_init.js" data-prepopulated-fields="[]">
 </script>
 
 
@@ -248,5 +525,14 @@
     </div>
 </div>
 <!-- END Container -->
+
+
 </body>
-</html>
+                    </div>
+                    <style>
+                      .content-header{
+                        color:red;
+                      }
+
+                    </style>
+                    </body>

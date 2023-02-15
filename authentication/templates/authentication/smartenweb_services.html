@@ -136,11 +136,31 @@
                         <ul class="fltr-lnks">
                             <li class="active"><a data-filter="*" href="#" itemprop="url">ALL SERVICES</a></li>
                             <li><a data-filter=".fltr-itm1" href="#" itemprop="url">ERP</a></li>
-                            <li><a data-filter=".fltr-itm2" href="#" itemprop="url">AMI</a></li>
+                            <li><a data-filter=".fltr-itm2" href="#" itemprop="url">AMI<p></p></a></li>
                             <li><a data-filter=".fltr-itm3" href="#" itemprop="url">Telecommunication </a></li>
                             <li><a data-filter=".fltr-itm4" href="#" itemprop="url">IOT</a></li>
                         </ul><!-- Filter Links -->
                         <div class="fltr-dta remove-ext3 text-left">
+                            <div class="row msonry2">
+                            
+                                {% for item in data %}
+                                <div class="col-md-3 col-sm-6 col-lg-3 fltr-itm fltr-itm1">
+                                    <div class="prtfl-bx2 brd-rd3">
+                                        <img src="/media/{{ item.services_image }}"
+                                             alt="{% static 'prtfl-img5-1.jpg' %}" itemprop="image">
+                                        <div class="prtfl-inf2">
+                                            <span class="theme-clr">IT Service</span>
+                                            <h4 itemprop="headline"><a href="/services" title=""
+                                                                       itemprop="services title">{{ item.services_title }}</a></h4>
+                                            <p itemprop="description">{{item.services_des}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                               {% endfor %}    
+                            </div>
+                        </div>
+                        <div class="fltr-itm1 remove-ext3 text-left">
                             <div class="row msonry2">
                             
                                 {% for item in data %}

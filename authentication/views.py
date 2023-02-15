@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from .models import Services,ImageSlider
+from .form import ServiceForm,ImageSliderForm
 
 # Create your views here.
 def home(request):
@@ -94,8 +95,38 @@ def widgets_page(request):
     return render(request,"authentication/widgets.html")
 
 def services_article_page(request):
-    return render(request,"authentication/services_article_upload.html")
+    if request.method == 'POST':
+        form = ServiceForm(request.POST,request.FILES)
+        if form.is_valid():
+            # create a new `Band` and save it to the db
+            service = form.save()
+            # redirect to the detail page of the band we just created
+            # we can provide the url pattern arguments as arguments to redirect function
+            # return redirect('band-detail', band.id))
+
+    else:
+
+    ##################
+        form = ServiceForm()
+    return render(request,
+                'authentication/test.html',
+                {'form': form})
     
 def homepage_imageslider(request):
-    return render(request,"authentication/homepage_imageslider.html")
+    if request.method == 'POST':
+        form = ImageSliderForm(request.POST,request.FILES)
+        if form.is_valid():
+            # create a new `Band` and save it to the db
+            imageslider = form.save()
+            # redirect to the detail page of the band we just created
+            # we can provide the url pattern arguments as arguments to redirect function
+            # return redirect('band-detail', band.id))
+
+    else:
+
+    ##################
+        form = ImageSliderForm()
+    return render(request,
+                'authentication/test2.html',
+                {'form': form})
 
